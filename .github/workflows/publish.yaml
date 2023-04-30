@@ -27,6 +27,7 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'poetry'
+      - name: Install poetry
         run: |
           curl -sSL https://install.python-poetry.org | python -
       - name: Install dependencies
