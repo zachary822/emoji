@@ -15,10 +15,7 @@ with open("emoji-test.txt") as f:
             continue
 
         result.append(
-            "".join(
-                struct.pack("<I", int(c, 16)).decode("utf-32le")
-                for c in m.group(0).split()
-            )
+            "".join(struct.pack("<I", int(c, 16)).decode("utf-32le") for c in m.group(0).split())
             .encode("unicode-escape")
             .decode()
         )
